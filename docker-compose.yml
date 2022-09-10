@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   mariadb:
@@ -19,4 +19,6 @@ services:
       MYSQL_USER: "${MYSQL_USER}"
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
     volumes:
-      - ${MARIADB_VOLUME}/:/var/lib/mysql
+      - cma_mariadb_volume:/var/lib/mysql
+volumes:
+  cma_mariadb_volume:
